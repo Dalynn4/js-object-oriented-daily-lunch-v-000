@@ -25,7 +25,9 @@ class Neighborhood {
   
   meals() {
     return store.deliveries.filter(delivery => {
-      if ()
+      if (delivery.neighborhoodId === this.id) {
+        return delivery.mealId
+      }
     }) 
   } 
 }
