@@ -51,12 +51,12 @@ class Customer {
   }
   
   meals() {
-  const x = store.deliveries.filter(delivery => {
+   store.deliveries.filter(delivery => {
       if (delivery.customerId === this.id) {
         return delivery.mealId
       }
     }) 
-    return x[0].mealId
+   
   }
   
   totalSpent() {
