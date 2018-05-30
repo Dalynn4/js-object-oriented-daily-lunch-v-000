@@ -24,11 +24,12 @@ class Neighborhood {
   }
   
   meals() {
-    return store.deliveries.filter(delivery => {
+    let unique = store.deliveries.filter(delivery => {
       if (delivery.neighborhoodId === this.id) {
         return delivery.mealId
       }
     }) 
+    return [...new Set(unique)]
   } 
 }
 
