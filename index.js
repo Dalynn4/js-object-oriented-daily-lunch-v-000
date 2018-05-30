@@ -24,6 +24,7 @@ class Neighborhood {
   }
   
   meals() {
+    let deliveriesToThisNeighboorhood = this.deliveries
     return store.meals.filter(meal => {
       return meal.neighborhoodId === this.id
     }) 
