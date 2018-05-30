@@ -51,7 +51,7 @@ class Customer {
   }
   
   meals() {
-  x =  store.deliveries.filter(delivery => {
+  const x = store.deliveries.filter(delivery => {
       if (delivery.customerId === this.id) {
         return delivery.mealId
       }
