@@ -52,7 +52,7 @@ class Customer {
   }
   
   totalSpent() {
-    this.meals
+  
   }
 }
 
