@@ -104,14 +104,16 @@ class Delivery {
   }
   
   customer(){
-   return store.customers.filter(customer => {
-     return customer.id === this.customerId
+    const cId = this.customerId
+   return store.customers.find(customer => {
+     return customer.id === cId
    }) 
   }
   
   neighborhood() {
-    return store.neighborhoods.filter(neighborhood => {
-      return neighborhood.id === this.neighborhoodId
+    const nId = this.neighborhoodId
+    return store.neighborhoods.find(neighborhood => {
+      return neighborhood.id === nId
     })
   }
 }
