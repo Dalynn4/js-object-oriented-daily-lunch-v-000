@@ -27,7 +27,7 @@ class Neighborhood {
     const unique = store.meals.filter(meal => {
       return meal.neighborhoodId === this.id
     }) 
-    return unique 
+    return [...new Set(unique)] 
   } 
 }
 
