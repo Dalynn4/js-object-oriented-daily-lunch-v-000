@@ -24,9 +24,9 @@ class Neighborhood {
   }
   
   meals() {
-    return store.meals.filter(meal => {
+    const unique = store.meals.filter(meal => {
       return meal.neighborhoodId === this.id
-    }) 
+    }) reutrn
   } 
 }
 
@@ -49,7 +49,7 @@ class Customer {
   
   meals() {
     return store.meals.filter(meal => {
-      return meal.Id === this.id 
+      return meal.customerId === this.id 
     })
   }
   
