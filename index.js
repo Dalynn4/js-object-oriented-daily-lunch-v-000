@@ -56,7 +56,7 @@ class Customer {
         return delivery.mealId
       }
     }) 
-    return x[0]
+    return x[0].mealId
   }
   
   totalSpent() {
