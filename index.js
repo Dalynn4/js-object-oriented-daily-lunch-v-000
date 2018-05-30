@@ -98,7 +98,7 @@ class Delivery {
   
   meal(){
     const mId = this.mealId
-    return store.meals.filter(meal => {
+    return store.meals.find(meal => {
       return meal.id === mId
     })
   }
