@@ -202,11 +202,7 @@ describe('index.js', () => {
           ]);
         });
       });
-      describe('customers()', () => {
-        it('returns a unique list of customers who have ordered this meal', () => {
-          expect(friedCheesecake.customers()).to.deep.equal([guy, marioBatali]);
-        });
-      });
+
     });
   });
 
