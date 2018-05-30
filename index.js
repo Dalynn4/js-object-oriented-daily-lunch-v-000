@@ -18,18 +18,15 @@ class Neighborhood {
   }
   
   customers() {
-   return store.meals.filter(meal => {
-      return meal.neighborhoodId === this.id
-    }) 
-    
-  
+    return store.customers.filter(customer => {
+      return customer.neighborhoodId === this.id 
+    })
   }
   
   meals() {
     const unique = store.meals.filter(meal => {
       return meal.neighborhoodId === this.id
-    }) 
-    return [...new Set(unique)] 
+    }) reutrn
   } 
 }
 
@@ -122,6 +119,7 @@ class Delivery {
     })
   }
 }
+
 
 
 
