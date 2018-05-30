@@ -24,10 +24,11 @@ class Neighborhood {
   }
   
   meals() {
-    return store.meals.filter(meal => {
+    const unique = store.meals.filter(meal => {
       return meal.neighborhoodId === this.id
-    })
-  }
+    }) 
+    return unique 
+  } 
 }
 
 let customerId = 0
