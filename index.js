@@ -56,8 +56,64 @@ class Customer {
   }
 }
 
+let mealId = 0
 
+class Meal {
+  constructor(title, price){
+    this.title = title
+    this.price = price
+    this.id = ++mealId
+    
+    store.meals.push(this)
+  } 
+  
+  deliveries(){
+    return store.deliveries.filter(delivery => {
+      return delivery.mealId === this.id
+    })
+  }
+  
+  customers(){
+    return store.customers.filter(customer => {
+      return customer.mealId === this.id 
+    })
+  }
+  
+  byPrice(){
+    
+  }
+}
 
+let deliveryId = 0
+
+class Delivery {
+  constructor(mealId, neighborhoodId, customerId){
+    this.mealId = mealId
+    this.neighborhoodId = neighborhoodId
+    this.customerId = customerId
+    this.id = ++deliveryId
+    
+    store.deliveries.push(this)
+  }
+  
+  meal(){
+    return store.meals.filter(meal => {
+      return meal.id === this.mealId
+    })
+  }
+  
+  customer(){
+   return store.customers.filter(customer => {
+     return customer.id === this.customerId
+   }) 
+  }
+  
+  neighborhood() {
+    return store.neighborhoods.filter(neighborhood => {
+      return neighborhood.id === this.neighborhoodId
+    })
+  }
+}
 
 
 
