@@ -123,7 +123,9 @@ class Delivery {
 
 
 
-
+return store.customers.filter(customer => {
+      return customer.neighborhoodId === this.id 
+    })
 
 
 
